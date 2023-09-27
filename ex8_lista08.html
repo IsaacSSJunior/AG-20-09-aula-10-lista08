@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preferência de Empresas</title>
+</head>
+<body>
+    <h2>Informe os dados da empresa</h2>
+    <label for="nome_empresa">Nome da Empresa:</label>
+    <input type="text" id="nome_empresa"><br>
+    
+    <label for="bolsa">Valor da Bolsa:</label>
+    <input type="number" id="bolsa"><br>
+    
+    <label for="vr">Valor do VR:</label>
+    <input type="number" id="vr"><br>
+    
+    <label for="tempo_deslocamento">Tempo de Deslocamento (minutos):</label>
+    <input type="number" id="tempo_deslocamento"><br>
+    
+    <button onclick="verificaPreferencia()">É preferida?</button>
+
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function verificaPreferencia(){
+        var nomeEmpresa = Number(nome_empresa.value);
+        var valorBolsa = Number(bolsa.value);
+        var valorVR = Number(vr.value);
+        var tempoDeslocamento = Number(tempo_deslocamento.value);
+
+        var preferida = false;
+
+        if (valorBolsa >= 1800 || valorVR >= 20 || tempoDeslocamento <= 30) {
+            preferida = true;
+        }
+
+        if (preferida) {
+            resultado.innerHTML = `A empresa ${nomeEmpresa} é uma de suas preferências`;
+        } else {
+            resultado.innerHTML = `A empresa ${nomeEmpresa} está fora da sua lista`;
+        }
+    }
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Pagamento</title>
+</head>
+<body>
+    <h2>Modo de Pagamento</h2>
+    <select id="select_pagamento">
+        <option value="dinheiro">Dinheiro</option>
+        <option value="debito">Cartão de débito</option>
+        <option value="credito">Cartão de crédito</option>
+        <option value="boleto">Boleto</option>
+    </select>
+    <br>
+    <button onclick="analisaPagamento()">Analisar compra</button>
+    
+</body>
+</html>
+<script>
+    function analisaPagamento(){
+        var modoPagamento = select_pagamento.value;
+
+        if (modoPagamento == 'dinheiro' || modoPagamento == 'debito') {
+            alert("Você terá que pagar a vista");
+        } else {
+            alert("Pagamento poderá ser parcelado");
+        }
+    }
+</script>
