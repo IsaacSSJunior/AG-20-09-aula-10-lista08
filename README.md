@@ -1,1 +1,2 @@
-# AG-20-09-aula-10-lista08
+# SPTech | Algoritmos - AULA 10 - 20/09/2023
+- Exercícios lista 8 - Operador Lógico OR
